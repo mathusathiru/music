@@ -1,0 +1,922 @@
+/* MAIN PAGE  
+    Present on all pages of the website 
+    
+    No margins, borders, or padding were added here to ensure the content fit to the edges of the screen,
+    not leaving any whitespace, which would not be aesthetically pleasing in this context 
+    */
+
+*{
+    margin: 0;
+    border: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+
+/* BODY
+    Present on all pages of the website */
+
+body {
+    background-color: #EFE9D9;
+}
+
+
+/* SMALL BANNER 
+    Present on all pages of the website 
+
+    Running thin banner across the width of the website, for highlighting sales or new music 
+    */
+
+#headline {
+    background-color: black;
+    color: #FFFEF2;
+    font-family: "Cabin", sans-serif;
+    padding: 0.5%; /* Providing visible space between text and margin of the banner, to prevent cramping*/ 
+    text-align: center;
+}
+
+/* HEADER DIV 
+    Present on all pages of the website 
+
+    .header div made up of three sub divs: header_logo, header_centre (containing .navigation and .socials) and header_cart
+    */
+
+header{
+    display: flex;
+    padding: 15px;
+    height: 180px;
+}
+
+/* Div containing logo image for the website */ 
+.header_logo {
+    margin: 10px;
+    flex-basis: 35%;
+}
+
+/* Div containing cart image for the website */ 
+.header_link {
+    margin: 20px;
+    flex-basis: 20%;
+}
+
+.header_img {
+    margin: 20px;
+    flex-basis: 20%;
+}
+
+/* Div containing navigation bar and social media channels */
+.header_centre{
+    width: 100%;
+    height: 50px;
+    margin-top: 10px;
+    margin: 5px;
+}
+
+/* Display for images in .header_logo and .header_cart 
+    cart_img hyperlinks to the cart for the user */ 
+#logo_img {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#logo_img {
+    width: 250px;
+}
+
+#cart_img {
+    margin-top: 4px;
+}
+
+/* NAVIGATION BAR
+    Component of .header_centre, with all elements in .navigation
+    Present on all webpages 
+    
+    Made up of an unordered list, with links to each page */ 
+
+.navigation {
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+ul {
+    text-align: center;
+    padding: 5px;
+  }
+  
+ul a {
+    font-family: "Nandaka Western", sans-serif; 
+    text-decoration: none; /* removes underlining from text, common in links */
+    color: black;
+    display: inline;
+    padding: 15px;
+    font-size: 25px;
+}
+  
+.nav_item {
+    display: inline;
+    padding: 10.5px;
+    list-style: none; /* removes bullet lists for navigation bar text */ 
+}
+  
+/* hover effect when the user hovers over an option */
+.nav_item:hover {
+    display: inline;
+    transition-duration: 0.25s;
+}
+
+ul a:hover{
+    color: #A65134;
+}
+
+/* Removes whitespace around social media images and cart image created by hyperlink */ 
+.header_socials ul img, .header_socials ul a {
+    padding: 0;
+  }
+
+/* FOOTER
+    Present on all pages of the website 
+    
+    Made up of two divs acting as columns, for text and a logo */ 
+
+footer {
+    margin-top: 5%;
+    background-color: black;
+    height: 140px;
+  }
+
+#footer_img {
+    margin-top: 15px;
+    width: 150px;
+}
+  
+.footer_row {
+    margin-left: 80%;
+    margin-right: 0%;
+    display: flex;
+}
+  
+.footer_column {
+    flex: 20%;
+    margin-top: 15px;
+}
+  
+.footer_column p {
+    margin-top: 10px;
+    color: #EFE9D9;
+    font-family: "Cabin", sans-serif;
+    text-decoration: none;
+}
+
+.php_echo_message {
+    font-family: "Cabin Condensed", sans-serif;
+    margin-top: 15px;
+}
+
+/* HOME PAGE */ 
+
+/* Hero image dimensions, stretching across the page */ 
+#main_img {
+    width: 100%;
+    height: 375px;
+    margin-bottom: 50px;
+}
+
+/* Text specification for titles on home page */ 
+.home_title_text {
+    text-align: center;
+    margin-bottom: 50px;
+    font-family: "Nandaka Western", sans-serif;
+    color: black;
+}
+
+/* PRODUCTS GRID 
+    Present on the homepage (3 products) and the store page (9 products) 
+    Div containg three sub divs, for three products in each row */ 
+
+.products_grid {
+    display: flex;
+    justify-content: center; /*Centrally positioning products in the middle of the page */ 
+}
+
+.left_product{
+    width:300px;
+    height:300px;
+}
+
+.middle_product{
+    margin-left: 35px; /*Positioning the middle product rightwards from the left product */
+    width:300px;
+    height:300px;
+}
+
+.right_product{
+    margin-left: 35px; /*Positioning the right product rightwards from the middle product */
+    width:300px;
+    height:300px;
+}
+
+.product_img {
+    padding: 10px;
+    width: 100%;
+}
+
+.product_title {
+    font-family: "Cabin", sans-serif;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    max-width: 200px;
+}
+
+.product_price {
+    margin-top: 7.5px;
+    font-family: "Cabin Condensed", sans-serif;
+}
+
+.product_button {
+    height: 50px;
+    width: 150px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+    margin-top: 20px;
+    padding: 10px;
+    font-family: "Cabin", sans-serif;
+    text-decoration: none;
+    background-color: #D8BB8E;
+    font-size: 15px;
+    color: black;
+}
+
+.product_button:hover {
+    background-color: #A65134;
+    color: #EFE9D9;
+    transition-duration: 0.25s;
+}
+
+/* Positioning product title, price and button for each product away from the margins defined by the sub div */ 
+.product_title, .product_price, .product_button {
+    margin-left: 15px;
+}
+
+#all_products_link {
+    text-decoration: none;
+}
+
+/* Larger button linking to all products, to encourage the user to begin shopping */ 
+#all_products_button {
+    margin-top: 100px;
+    margin-bottom: 100px;
+    margin-left: auto;
+    margin-right: auto;
+    display: flex;
+    width: 150px;
+    height: 60px;
+    padding: 15px;
+    font-family: "Cabin", sans-serif;
+    background-color: #D8BB8E;
+    justify-content: center;
+	align-items: center;
+    padding: 10px;
+    text-decoration: none;
+    font-size: 15px;
+    color: black;
+}
+
+#all_products_button:hover {
+    background-color: #A65134;
+    color: #EFE9D9;
+    transition-duration: 0.25s;   
+}
+
+/* Centrally positioning tour dates, made up of two sub divs for locations and dates */ 
+#tour_dates {
+    margin-top: 50px;
+    display: flex;
+    justify-content: center;
+}
+
+#dates_column {
+    margin-left: 100px;
+}
+
+#locations_column p, #dates_column p{
+    font-family: "Cabin", sans-serif;
+    margin-bottom: 30px;
+}
+
+/* ABOUT PAGE 
+    Three divs containing an image and accompanying text */ 
+
+/* PAGE TITLE
+    Present on about page, music page, store page, contact page 
+    
+    Large margin between header and page content */ 
+
+.page_title {
+    margin-top: 40px;
+    margin-bottom: 70px;
+    margin-left: 200px;
+    font-family: "Nandaka Western", sans-serif;
+}
+
+/* Centering each row, containing an image and paragraph in columns, on the page */ 
+.about_row {
+    display: flex;
+    justify-content: center;
+}
+
+.about_col img {
+    margin-left: 200px;
+    margin-bottom: 50px;
+}
+
+.about_col p {
+    margin-top: 7px;
+    margin-left: 50px;
+    margin-right: 200px;
+    font-family: "Cabin", sans-serif;
+}
+
+/* _switch positions the image on the right, rather than the left, and demands separate dimensions for the 
+    text and image in the "column" divs */ 
+
+.about_col_switch img {
+    margin-right: 200px;
+    margin-bottom: 50px;
+}
+
+.about_col_switch p {
+    margin-top: 7.5px;
+    margin-left: 200px;
+    margin-right: 50px;
+    font-family: "Cabin", sans-serif;
+}
+
+/* MUSIC PAGE 
+    Made up of div rows, each containing columns for an image and text */ 
+
+.music_row {
+    display: flex; /*Laying out elements in "column" divs */ 
+    margin-bottom: 100px;
+}
+
+.music_img {
+    margin-left: 200px;
+    margin-bottom: 50px;
+}
+
+.music_col p, .music_col li {
+    margin-left: 50px;
+}
+
+.music_col p {
+    margin-top: 15px;
+    margin-bottom: 20px;
+    margin-left: 50px;
+    margin-right: 200px;
+    font-family: "Nandaka Western", sans-serif;
+    font-size: 20px;
+}
+
+.music_col li {
+    margin-left: 60px;
+    display: list-item;
+    list-style-position: inside;
+    font-family: "Cabin", sans-serif;
+    font-size: 15px;
+}
+
+.music_col li:not(:last-child) {
+    margin-bottom: 15px;
+}
+
+.music_col a:not(:last-child) {
+    margin-left: 50px;
+}
+
+.music_col img {
+    margin-top: 20px;
+    width: 50px;
+}
+
+.music_col img:not(:last-child){
+    margin-left: 50px;
+}
+
+.music_col img:last-child{
+    margin-left: 5px;
+}
+
+/* SHOP PAGE */ 
+
+.products_grid:not(:last-child) {
+    margin-bottom: 50px;
+}
+
+/* PRODUCT PAGE 
+    Product page with five main divs 
+    */ 
+
+#product_info {
+    display: flex;
+    margin-left: 275px;
+    margin-top: 25px;
+}
+
+#product_info_col {
+    margin-top: 30px;
+    margin-left: 100px;
+}
+
+#product_name, #product_price {
+    font-family: "Cabin", sans-serif;
+}
+
+#product_name {
+    margin-bottom: 20px;
+}
+
+#product_price {
+    margin-bottom: 30px;
+}
+
+/* .quantity  and .quantity_step also apply to quantities on the basket page */
+#option, #option_select, .quantity, .quantity_step {
+    font-family: "Cabin Condensed", sans-serif;
+}
+
+#option {
+    margin-right: 10px;
+}
+
+#option_select {
+    width: 200px;
+}
+
+#option_div {
+    margin-bottom: 25px;
+}
+
+/* .quantity also applies to quantities on the basket page */
+
+.quantity_div {
+    margin-top: 10px;
+}
+
+#option_select {
+    width: 200px;
+    margin-left: 30px;
+    padding: 2.5%;
+    background-color: #D8BB8E;
+}
+
+/* .quantity_step also applies to quantities on the basket page */
+.quantity_step {
+    width: 48.5%;
+    margin-left: 30px;
+    padding: 2.5%;
+    background-color: #D8BB8E;
+}
+
+#buy_button {
+    margin-top: 40px;
+    margin-bottom: 10px;
+    padding: 15px;
+    font-family: "Cabin", sans-serif;
+    background-color: #D8BB8E;  
+}
+
+#buy_button:hover {
+    background-color: #A65134;
+    color: #EFE9D9;
+    transition-duration: 0.25s;   
+}
+
+.product_images {
+    display: flex;
+    justify-content: left;
+    margin-left: 275px;
+    margin-top: 10px;
+}
+
+.product_images img {
+    width: 117.5px;
+}
+
+/* Applies positioning of all images excluding the last image */ 
+.product_images img:not(:last-child){
+    margin-right: 10px;
+}
+
+.product_details, .review_header, .product_review{
+    margin-left: 275px; 
+    margin-right: 500px; 
+}
+
+.product_details h4, .review_header h4, .review_header{
+    margin-bottom: 25px;
+    font-family: "Cabin", sans-serif;
+}
+
+.product_details{
+    margin-top: 75px;
+}
+
+.review_header {
+    margin-top: 50px;
+}
+
+#review_popup {
+    margin-bottom: 50px;
+}
+
+#review_popup .php_echo_message {
+    margin-left: 285px;
+}
+  
+/* Syling the form container */
+#review_container {
+    margin-left: 275px;
+    max-width: 300px;
+    padding: 10px;
+}
+
+/* Creating full width text fields with display formatting */
+#review_container input[type=text], #review_container textarea{
+    width: 100%;
+    padding: 15px;
+    margin: 5px 0 22px 0;
+    border: none;
+    background: #f1f1f1;
+    font-family: "Cabin", sans-serif; 
+    color: black;
+}
+
+/* Disabling resizing of textarea, which can be resized by default */ 
+#review_container textarea{
+    resize: none;
+    font-size: 13px;
+}
+
+/* Styling submission buttons */ 
+#review_container #form_submit {
+    color: #EFE9D9;
+    padding: 16px 20px;
+    cursor: pointer;
+    width: 100%;
+    margin-bottom:10px;
+    font-family: "Cabin", sans-serif; 
+    background-color: #D8BB8E;
+}
+
+#review_container #form_submit:hover {
+    background-color: #A65134;
+    color: #EFE9D9;
+    transition-duration: 0.25s;   
+}
+
+.review_info {
+    display: flex;
+    margin-bottom: 30px;
+}
+
+/* Sets a fixed area for the review, in case any customers type in large amounts of text */
+.review_name {
+    width: 200px;
+    overflow: visible;
+}
+
+.review_date {
+    margin-left: 30px;
+}
+
+.review_text {
+    margin-bottom: 50px;
+}
+
+.product_details p, .review_name, .review_date, .review_text {
+    font-family: "Cabin", sans-serif;
+}
+
+/* Contact Page */ 
+
+#contact {
+    display: flex;
+    margin-left: 200px;
+    margin-right: 200px;
+}
+
+#contact p {
+    font-family: "Cabin", sans-serif;
+}
+
+#contact_col1 {
+    width: 1000px;
+}
+
+.contact_heading {
+    margin-bottom: 50px;
+    font-family: "Nandaka Western", sans-serif;
+}
+
+.contact_icon {
+    display: flex;
+    margin-left: 10px;
+}
+
+/* Applies positioning of all contact icons excluding the last icons */ 
+.contact_icon:not(:last-child){
+    margin-top: 50px;
+    margin-bottom: 35px;
+}
+
+.icon_text {
+    margin-top: 5px;
+    margin-left: 10px;
+    font-family: "Cabin", sans-serif;
+}
+
+/* Importing a map */
+#map {
+    margin-top: 30px;
+    margin-bottom: 65px;
+}
+
+#contact_name, #contact_email, #contact_message {
+    width: 500px;
+    margin-bottom: 25px;
+    padding: 0.5%;
+    font-family: "Cabin", sans-serif; 
+}
+
+#contact_name, #contact_email {
+    height: 30px;
+}
+
+#contact_message {
+    height: 100px;
+    vertical-align: text-top;
+    resize: none; /* disabling resizing of the textarea, which is default in css */
+    font-size: 14px;
+}
+
+#form_button {
+    display: block;
+    width: 100px;
+    height: 40px;
+    padding: 15px;
+    text-align: center;
+    line-height: 10px;
+    font-family: "Cabin", sans-serif;
+    background-color: #D8BB8E;
+}
+
+#form_button:hover {
+    background-color: #A65134;
+    color: #EFE9D9;
+    transition-duration: 0.25s;   
+}
+
+/* BASKET PAGE */ 
+
+#basket_page_title {
+    margin-top: 40px;
+    margin-bottom: 70px;
+    margin-left: 100px;
+    font-family: "Nandaka Western", sans-serif;
+}
+
+#store_link, #product_names {
+    margin-left: 100px;
+    font-family: "Cabin", sans-serif;
+    text-decoration: none;
+}
+
+/* Displays the colour black if the user does not hover over the return to store link, maintaining the colour theme */ 
+#store_link, #store_link:visited {
+    color: black;
+}
+
+/* Hover colour to indicate a clickable link to the user */ 
+#store_link:hover {
+    color: #A65134;
+}
+
+#product_names {
+    margin-top: 20px;
+    margin-bottom: 35px;
+}
+
+/* styles  container for the cart information */
+#cart_info {
+    display: flex; 
+    margin-left: 100px; 
+    font-family: "Cabin", sans-serif; 
+}
+
+/* styles the icon in the contact section */
+.contact_icon img {
+    position: absolute;
+}
+
+/* styles the text in the contact section */
+.contact_icon p {
+    margin-left: 40px; 
+}
+
+/* Block display used to vertically arrange products, instead of horizontally */ 
+#summary {
+    display: block;
+}
+
+#empty_summary_row {
+    width: 600px;
+}
+
+#empty_basket_notification {
+    font-family: "Cabin", sans-serif;
+}
+
+.summary_row {
+    display: flex;
+    margin-bottom: 50px;
+}
+
+.summary_col1{
+    width: 100px;
+}
+
+.summary_col1 img{
+    width: 100px;
+}
+
+.summary_col2{
+    width: 250px;
+    margin-left: 50px;
+}
+
+.summary_col2 p {
+    font-size: 15px;
+    margin-bottom: 15px;
+}
+
+.summary_col3{
+    width: 150px;
+    margin-left: 50px;
+}
+
+.summary_col3 img {
+    margin-left: 110px;
+    margin-bottom: 10px;
+}
+
+#cart_quantity_div {
+    margin-left: 12px;
+    background-color: #D8BB8E;
+}
+
+#price {
+    text-align: right;
+}
+
+#delete_button {
+    background: transparent;
+    border: none;
+}
+
+#total_info {
+    display: flex;
+    font-size: 17.5px;
+}
+
+/* Positions the total price away from its accompanying text for clarity */
+#total_info p:not(:last-child) {
+    margin-right: 30px; 
+}
+
+#totals button, #empty_summary_row button {
+    margin-top: 40px; 
+    width: 150px; 
+    height: 50px; 
+    padding: 15px; 
+    font-family: "Cabin", sans-serif;
+    background-color: #D8BB8E; 
+}
+
+/* hover effects for button */
+#totals button:hover, #empty_summary_row button:hover {
+    background-color: #A65134; /* Changes the background color of button when hovered */
+    color: #EFE9D9; /* Changes  text color of the button when hovered */
+    transition-duration: 0.25s; /* Sets transitiion duration when hovered */
+}
+
+#basket_information {
+    margin-left: 100px;
+    margin-top: 50px;
+}
+
+.info_heading {
+    display: flex;
+}
+
+.info_heading img {
+    width: 20px;
+    height: 20px;
+}
+
+.info_heading h3 {
+    margin-left: 15px;
+    margin-bottom: 15px;
+    font-family: "Cabin", sans-serif;
+}
+
+/* Making overflow of paragraph text visible, in the case of lengthy information */ 
+.info_section p {
+    margin-bottom: 30px;
+    width: 600px;
+    overflow: visible;
+    font-family: "Cabin Condensed", sans-serif; 
+}
+
+/* LOGIN */
+
+/* Set left margin of element with ID 'authorised_user' to 200 pixels */
+#authorised_user {
+    margin-left: 200px;
+} 
+
+/* Set flexbox layout and left margin of element with ID 'user_forms' to 200 pixels */
+#user_forms {
+    display: flex;
+    margin-left: 200px;
+}
+
+/* Set left margin of element with ID 'login_form' to 250 pixels */
+#login_form {
+    margin-left: 250px;
+}
+
+/* Styling for form title heading */
+.form_title {
+    margin-bottom: 25px;
+    font-size: 20px;
+    font-family: "Nandaka Western", sans-serif;
+}
+
+/* Styling for  prompt text */
+.login_prompt {
+    margin-bottom: 20px;
+    font-family: "Cabin", sans-serif;
+}
+
+/* Set font family and margins for text boxes */
+#register *:not(.form_title):not(.login_prompt), #login *:not(.form_title):not(.login_prompt){
+    font-family: "Cabin Condensed", sans-serif;
+    margin-bottom: 5px;
+    margin-top: 10px;
+}
+
+/* Styling for login input fields */
+.login_input {
+    margin-top: 10px;
+    width: 250px;
+    height: 30px;
+    margin-bottom: 10px;
+}
+  
+/* Styling for  button */
+.input_details {
+    margin-top: 40px;
+    display: flex;
+    width: 150px;
+    height: 60px;
+    padding: 15px;
+    font-family: "Cabin", sans-serif;
+    background-color: #D8BB8E;
+    justify-content: center;
+	align-items: center;
+    padding: 10px;
+    text-decoration: none;
+    font-size: 15px;
+    color: black;
+}
+
+/* Styling for button when hovered over with the mouse */
+.input_details:hover {
+    background-color: #A65134;
+    color: #EFE9D9;
+    transition-duration: 0.25s;   
+}
+
+/* Styling for error message displayed when there is an issue with the user account */
+.account_error {
+    margin-top: 10px;
+    font-family: "Cabin Condensed", sans-serif;
+}
+
+/* Styling for welcome message displayed after user logs in */
+#welcome_message {
+    font-family: "Cabin", sans-serif;
+    font-size: 15px;
+}
