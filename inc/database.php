@@ -1,9 +1,9 @@
 <?php
-// Database credentials
+// Database credentials - modified for GitHub
 $db_host = "localhost"; 
-$db_user = "mt21942"; 
-$db_pass = "bqjy4NKFatHDt"; 
-$db_name = "ce154_" . $db_user; 
+$db_user = "localuser"; 
+$db_pass = "userPassword123!"; 
+$db_name = "user_" . $db_user; 
 
 // Function connecting to the database
 function connect(){
