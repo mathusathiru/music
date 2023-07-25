@@ -2,7 +2,8 @@
 // start session with an empty basket 
 session_set_cookie_params(0);
 session_start();
-// Set the variable for the page name
+
+// setting variables for page name
 $page_name = "Home";
 // import external files 
 include('inc/header.php');
@@ -15,10 +16,9 @@ $data = getProducts($conn);
 $result = $data['result'];
 $row = $data['row'];
 
-// End the PHP so you can add HTML
 ?>
-<!-- Add the page content below -->
-    <!-- Hero image, stretching across the page, with overlapping text -->
+
+<!-- Hero image, stretching across the page, with overlapping text -->
     <!-- Hero image reference: https://www.redbookmag.com/life/news/a50373/exclusive-video-country-singer-kelsea-ballerini-on-tour-with-thomas-rhett/ -->
     <img id = "main_img" src="images\hero.jpg" alt="Landscape image of Kelsea Ballerini singing at a concert, with LED letters of her name behind her.">
 
