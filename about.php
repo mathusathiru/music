@@ -1,6 +1,5 @@
 <?php
 
-// Set the variable for the page name
 $page_name = "About";
 
 // including page header
